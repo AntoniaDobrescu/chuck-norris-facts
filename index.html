@@ -20,9 +20,10 @@
     <div class="container">
       <h1 class="title">Chuck Norris Jokes</h1>
       <p>Press the button for another joke!</p>
+      <button onClick='window.location.reload();'>Button</button>
 
       <div class="content" id="chuck-norris">
-      <button onClick='window.location.reload();'>Button</button>
+      <img src = 'https://assets.chucknorris.host/img/avatar/chuck-norris.png'/>
       </div>
     </div>
 
@@ -34,7 +35,7 @@
   axios.get(url)
     .then((response) => {
       element.insertAdjacentHTML('beforebegin',`<p>${response.data.value}</p>`)
-      console.log(response.data.value);
+      
     })
     .catch(function(error){
       console.log(error);
